@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDo App</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <header class="l-header">
+      <div class="c-container">
+        <div class="c-header__flex">
+          <h1>することリスト</h1>
+          <nav>
+            <ul class="c-nav__ul">
+              <li class="p-nav__list"><a href="#l-new">リストをつくる</a></li>
+              <li class="p-nav__list">
+                <a href="#l-active">まだ終わってない</a>
+              </li>
+              <li class="p-nav__list"><a href="#">完了済み！</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="l-new">
+        <div class="c-container">
+          <h2 class="p-newTask">リストをつくる</h2>
+          <div class="c-board">
+            <form action="" method="GET" name="new" class="p-form">
+              <div>
+                <label for="title">タイトル</label><br />
+                <input type="text" id="newTitle" /><br />
+                <label for="task">すること</label><br />
+                <div id="taskInputs">
+                  <input type="text" name="task" /><br />
+                </div>
+                <input
+                  type="button"
+                  id="js-addTask"
+                  class="c-btn__board c-varColor--pink"
+                  value="追加する"
+                />
+                <input
+                  type="button"
+                  id="js-delTask"
+                  class="c-btn__board p-btn__board--reduce"
+                  value="枠を減らす"
+                />
+              </div>
+              <input
+                type="submit"
+                id="js-submit__new"
+                class="c-btn__board p-btn__board--submit"
+                value="決定"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+      <section id="l-active">
+        <div class="c-container">
+          <h2 class="p-heading">まだ終わってない</h2>
+          <div id="js-actives"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

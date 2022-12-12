@@ -1,0 +1,136 @@
+body {
+  font-family: sans-serif;
+  height: 1000px;
+}
+
+#l-active {
+  background: #ffff6b;
+}
+
+#l-new {
+  padding: 96px 0 32px;
+}
+
+.l-header {
+  position: fixed;
+  background: #063;
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  padding: 16px 0;
+  z-index: 10;
+}
+
+.c-board {
+  position: relative;
+  margin: 2em auto;
+  padding: 1em;
+  width: 100%; /* ボックス幅 */
+  background: #006633; /* ボックス背景色 */
+  color: #fff; /* 文章色 */
+  border: 8px solid #b2771f; /* 枠線 */
+  border-radius: 3px; /* 角の丸み */
+  box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+}
+
+.c-board::before,
+.c-board::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+}
+
+.c-board::before {
+  width: 20px;
+  right: 10px;
+  border: solid 3px #ffff6b; /*チョーク（黄色）*/
+  border-radius: 3px 2px 0 2px;
+}
+
+.c-board::after {
+  width: 15px;
+  right: 45px;
+  border: solid 3px #fff; /*チョーク（白） */
+  border-radius: 8px 5px 2px 5px;
+}
+
+.c-btn__board {
+  cursor: pointer;
+  color: var(--color, #fff);
+  background-color: transparent;
+  border-radius: 4px;
+  border: solid 2px var(--color, #fff);
+}
+
+.c-checkList {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.c-container {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.c-header__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c-nav__ul {
+  display: flex;
+}
+
+.c-varColor--pink {
+  --color: #ff7fbf;
+}
+
+.p-btn__board--reduce {
+  --color: #6fd1ff;
+  margin-left: 24px;
+}
+
+.p-btn__board--submit {
+  --color: #ffff6b;
+  font-size: 3em;
+  line-height: 1;
+  padding: 8px;
+  border-width: 6px;
+}
+
+.p-btn__board--del {
+  --color: #6fd1ff;
+  font-size: 2em;
+  line-height: 1;
+  padding: 6px;
+  border-width: 4px;
+}
+
+.p-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.p-form div * + * {
+  margin-top: 8px;
+}
+
+.p-form div .p-btn__board--reduce {
+  margin-top: 24px;
+}
+
+.p-form label {
+  font-weight: bold;
+}
+
+.p-nav__list {
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 4px;
+  border: solid 2px #fff;
+  margin-left: 8px;
+}
